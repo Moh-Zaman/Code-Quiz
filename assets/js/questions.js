@@ -100,6 +100,9 @@ endPoints.textContent = points
       points ++;
       localStorage.setItem("points", points)
       endPoints.textContent = points
+
+      var sound = new Audio("assets/sfx/correct.wav")
+      sound.play()
     });
   
     question.wrongAnswersEl.forEach(function (wrongAnswer) {
@@ -110,6 +113,9 @@ endPoints.textContent = points
           hide(question.questionEl);
           show(question.nextQuestionEl);
         }, 3000);
+        
+        var sound = new Audio("assets/sfx/incorrect.wav")
+        sound.play()
       });
     });
   }
