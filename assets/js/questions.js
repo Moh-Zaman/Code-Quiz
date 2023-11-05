@@ -95,7 +95,7 @@ endPoints.textContent = points
       setTimeout(() => {
         hide(question.questionEl);
         show(question.nextQuestionEl);
-      }, 4000);
+      }, 3000);
 
       points ++;
       localStorage.setItem("points", points)
@@ -109,7 +109,7 @@ endPoints.textContent = points
         setTimeout(() => {
           hide(question.questionEl);
           show(question.nextQuestionEl);
-        }, 4000);
+        }, 3000);
       });
     });
   }
@@ -117,7 +117,7 @@ endPoints.textContent = points
 questions.forEach(handleQuestion);
 
 // Deletes Points in LocalStorage on Refresh
-window.onbeforeunload = function (e) {
+window.onbeforeunload = function () {
     localStorage.removeItem("points");
 };
 

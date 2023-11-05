@@ -6,6 +6,8 @@ var endEl = document.querySelector("#end-screen")
 var feedbackEl = document.querySelector("#feedback")
 var startButton = document.querySelector("#start")
 var question1El = document.querySelector("#question-1")
+var submitEl = document.querySelector("#submit")
+var initialEl = document.querySelector("#initials")
 
 
 // Show/Hide functions
@@ -24,7 +26,7 @@ function show (elements, specifiedDisplay) {
 }
 
 // Timer
-var time = 75;
+var time = 60;
 
 function countdown () {
     var timerInterval = setInterval(function() {
@@ -50,5 +52,19 @@ startButton.addEventListener("click", function(event) {
     show(feedbackEl);    
 });
 
+// Enter Highscore
+submitEl.addEventListener("click", function(event) {
+  event.preventDefault();
+  var leaderboard = {
+    initial: initialEl.value.trim(),
+    score: points
+  };
 
+  var existingHighscore = JSON.parse(localStorage.getItem("highscore")) || [];
 
+  existingHighscore.push(leaderboard)
+
+  localStorage.setItem("highscore", JSON.stringify(existingHighscore));
+
+  feedbackEl.textContent = "Highscore Submitted!"
+})
