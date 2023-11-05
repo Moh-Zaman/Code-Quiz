@@ -14,7 +14,7 @@ Steps:
 
 The website can be accessed here: https://moh-zaman.github.io/Code-Quiz/
 
-![Landing Page of Protfolio]()
+![Landing Page of Protfolio](https://github.com/Moh-Zaman/Code-Quiz/blob/main/assets/images/Landing%20Page.png)
 
    
 ## Credits
