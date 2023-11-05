@@ -5,6 +5,8 @@ var questionsEl = document.querySelector("#questions")
 var endEl = document.querySelector("#end-screen")
 var feedbackEl = document.querySelector("#feedback")
 var startButton = document.querySelector("#start")
+var question1El = document.querySelector("#question-1")
+
 
 // Show/Hide functions
 function hide (elements) {
@@ -22,7 +24,7 @@ function show (elements, specifiedDisplay) {
 }
 
 // Timer
-var time = 5;
+var time = 75;
 
 function countdown () {
     var timerInterval = setInterval(function() {
@@ -44,4 +46,9 @@ startButton.addEventListener("click", function(event) {
     countdown();
     hide(startEl);
     show(questionsEl);
+    show(question1El);
+    show(feedbackEl);    
 });
+
+
+
